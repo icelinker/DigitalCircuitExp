@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4
+# SW Build 1071353 on Tue Nov 18 18:06:20 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Apr 07 19:13:58 2016
+# Process ID: 6592
+# Log file: E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1/XADCdemo.vds
+# Journal file: E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source XADCdemo.tcl

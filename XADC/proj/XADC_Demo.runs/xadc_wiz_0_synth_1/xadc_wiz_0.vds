@@ -1,0 +1,362 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:24:04 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Mon Apr 11 11:22:36 2016
+# Process ID: 17404
+# Log file: H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.runs/xadc_wiz_0_synth_1/xadc_wiz_0.vds
+# Journal file: H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.runs/xadc_wiz_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xadc_wiz_0.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a35tcpg236-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.cache/wt [current_project]
+# set_property parent.project_path H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# set_property ip_repo_paths H:/ZYNQ_prj/DigitalCircuit/XADC/repo [current_project]
+# read_ip H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'h:/ZYNQ_prj/DigitalCircuit/XADC/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2014.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'xadc_wiz_0' generated file not found 'h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xadc_wiz_0' generated file not found 'h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xadc_wiz_0' generated file not found 'h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_stub.vhdl'. Please regenerate to continue.
+# set_property is_locked true [get_files H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xci]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file xadc_wiz_0.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top xadc_wiz_0 -part xc7a35tcpg236-1 -mode out_of_context
+Command: synth_design -top xadc_wiz_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 247.379 ; gain = 90.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.vhd:82]
+	Parameter INIT_40 bound to: 16'b0000000000000000 
+	Parameter INIT_41 bound to: 16'b0010000100001111 
+	Parameter INIT_42 bound to: 16'b0000010000000000 
+	Parameter INIT_43 bound to: 16'b0000000000000000 
+	Parameter INIT_44 bound to: 16'b0000000000000000 
+	Parameter INIT_45 bound to: 16'b0000000000000000 
+	Parameter INIT_46 bound to: 16'b0000000000000000 
+	Parameter INIT_47 bound to: 16'b0000000000000000 
+	Parameter INIT_48 bound to: 16'b0000000000000000 
+	Parameter INIT_49 bound to: 16'b1100000011000000 
+	Parameter INIT_4A bound to: 16'b0000000000000000 
+	Parameter INIT_4B bound to: 16'b0000000000000000 
+	Parameter INIT_4C bound to: 16'b0000000000000000 
+	Parameter INIT_4D bound to: 16'b0000000000000000 
+	Parameter INIT_4E bound to: 16'b0000000000000000 
+	Parameter INIT_4F bound to: 16'b0000000000000000 
+	Parameter INIT_50 bound to: 16'b1011010111101101 
+	Parameter INIT_51 bound to: 16'b0101011111100100 
+	Parameter INIT_52 bound to: 16'b1010000101000111 
+	Parameter INIT_53 bound to: 16'b1100101000110011 
+	Parameter INIT_54 bound to: 16'b1010100100111010 
+	Parameter INIT_55 bound to: 16'b0101001011000110 
+	Parameter INIT_56 bound to: 16'b1001010101010101 
+	Parameter INIT_57 bound to: 16'b1010111001001110 
+	Parameter INIT_58 bound to: 16'b0101100110011001 
+	Parameter INIT_59 bound to: 16'b0000000000000000 
+	Parameter INIT_5A bound to: 16'b0000000000000000 
+	Parameter INIT_5B bound to: 16'b0000000000000000 
+	Parameter INIT_5C bound to: 16'b0101000100010001 
+	Parameter INIT_5D bound to: 16'b0000000000000000 
+	Parameter INIT_5E bound to: 16'b0000000000000000 
+	Parameter INIT_5F bound to: 16'b0000000000000000 
+	Parameter IS_CONVSTCLK_INVERTED bound to: 1'b0 
+	Parameter IS_DCLK_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SIM_MONITOR_FILE bound to: h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0/simulation/functional/design.txt - type: string 
+INFO: [Synth 8-113] binding component instance 'U0' to cell 'XADC' [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.vhd:149]
+INFO: [Synth 8-256] done synthesizing module 'xadc_wiz_0' (1#1) [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.vhd:82]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 281.512 ; gain = 124.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 281.512 ; gain = 124.133
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from D:/Xilinx/Vivado/2014.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from D:/Xilinx/Vivado/2014.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xdc] for cell 'U0'
+Finished Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xdc] for cell 'U0'
+Parsing XDC File [H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 482.043 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xadc_wiz_0 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 482.043 ; gain = 324.664
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 524.883 ; gain = 367.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 524.883 ; gain = 367.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |XADC |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     1|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:23 . Memory (MB): peak = 534.348 ; gain = 135.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 534.348 ; gain = 376.969
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xdc] for cell 'U0'
+Finished Parsing XDC File [h:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 557.008 ; gain = 358.496
+# rename_ref -prefix_all xadc_wiz_0_
+# write_checkpoint -noxdef xadc_wiz_0.dcp
+# catch { report_utilization -file xadc_wiz_0_utilization_synth.rpt -pb xadc_wiz_0_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 557.008 ; gain = 0.000
+# if { [catch {
+#   file copy -force H:/ZYNQ_prj/DigitalCircuit/XADC/proj/XADC_Demo.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0.dcp
+# } _RESULT ] } { 
+#   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+# }
+# if { [catch {
+#   write_verilog -force -mode synth_stub H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_stub.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode synth_stub H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_stub.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_verilog -force -mode funcsim H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_funcsim.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode funcsim H:/ZYNQ_prj/DigitalCircuit/XADC/src/ip/xadc_wiz_0_1/xadc_wiz_0_funcsim.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 11 11:23:13 2016...

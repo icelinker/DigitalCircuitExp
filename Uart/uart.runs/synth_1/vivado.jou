@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4
+# SW Build 1071353 on Tue Nov 18 18:06:20 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Apr 09 11:21:24 2016
+# Process ID: 13472
+# Log file: E:/uart/uart/uart.runs/synth_1/my_uart_top.vds
+# Journal file: E:/uart/uart/uart.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source my_uart_top.tcl

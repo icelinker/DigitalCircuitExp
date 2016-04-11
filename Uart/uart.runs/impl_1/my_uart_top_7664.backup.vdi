@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2014.4
+# SW Build 1071353 on Tue Nov 18 18:06:20 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Apr 09 10:35:02 2016
+# Process ID: 10396
+# Log file: E:/uart/uart/uart.runs/impl_1/my_uart_top.vdi
+# Journal file: E:/uart/uart/uart.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source my_uart_top.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.4
+Loading clock regions from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from E:/vivado2014.4/Vivado/2014.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from E:/vivado2014.4/Vivado/2014.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+Parsing XDC File [E:/uart/uart/uart.srcs/constrs_1/new/uart.xdc]
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command 'set_property PACKAGE_PIN U18 [get_ports {rst_n]
+set_property IOSTANDARD LVCMOS33 [get_ports {rst_n]
+##Bank = 14, Pin name = ,					Sch name = BTNU
+#set_property PACKAGE_PIN T18 [get_ports {BTN[0]}]
+#se ... (truncated) ' found in constraint file. [E:/uart/uart/uart.srcs/constrs_1/new/uart.xdc:125]
+Finished Parsing XDC File [E:/uart/uart/uart.srcs/constrs_1/new/uart.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 463.289 ; gain = 0.000

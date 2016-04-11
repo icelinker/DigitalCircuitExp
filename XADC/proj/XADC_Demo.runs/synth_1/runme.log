@@ -1,0 +1,469 @@
+
+*** Running vivado
+    with args -log XADCdemo.vds -m32 -mode batch -messageDb vivado.pb -source XADCdemo.tcl
+
+
+****** Vivado v2014.4
+  **** SW Build 1071353 on Tue Nov 18 18:06:20 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source XADCdemo.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a35tcpg236-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.cache/wt [current_project]
+# set_property parent.project_path E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# set_property ip_repo_paths E:/Basys3-master/Basys3-master/Projects/XADC_Demo/repo [current_project]
+# read_ip E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/Basys3-master/Basys3-master/Projects/XADC_Demo/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado2014.4/Vivado/2014.4/data/ip'.
+# set_property used_in_implementation false [get_files -all e:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all e:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0.xdc]
+# set_property used_in_implementation false [get_files -all e:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0.dcp]
+# set_property is_locked true [get_files E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0.xci]
+# read_verilog -library xil_defaultlib {
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/sevensegdecoder.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/segClkDevider.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/mux4_4bus.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/decoder3_8.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/counter3bit.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/DigitToSeg.v
+#   E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v
+# }
+# read_xdc E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/constraints/Basys3_Master.xdc
+# set_property used_in_implementation false [get_files E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/constraints/Basys3_Master.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file XADCdemo.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top XADCdemo -part xc7a35tcpg236-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Command: synth_design -top XADCdemo -part xc7a35tcpg236-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/ip/xadc_wiz_0_1/xadc_wiz_0.xci
+
+INFO: [IP_Flow 19-2162] IP 'xadc_wiz_0' is locked:
+* IP definition 'XADC Wizard (3.0)' for IP 'xadc_wiz_0' has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 268.688 ; gain = 47.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'XADCdemo' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:22]
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1/.Xil/Vivado-6592-user-PC/realtime/xadc_wiz_0_stub.vhdl:33]
+WARNING: [Synth 8-350] instance 'XLXI_7' of module 'xadc_wiz_0' requires 22 connections, but only 21 given [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:56]
+INFO: [Synth 8-638] synthesizing module 'DigitToSeg' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/DigitToSeg.v:23]
+INFO: [Synth 8-638] synthesizing module 'sevensegdecoder' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/sevensegdecoder.v:21]
+INFO: [Synth 8-226] default block is never used [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/sevensegdecoder.v:28]
+INFO: [Synth 8-256] done synthesizing module 'sevensegdecoder' (1#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/sevensegdecoder.v:21]
+INFO: [Synth 8-638] synthesizing module 'mux4_4bus' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/mux4_4bus.v:21]
+INFO: [Synth 8-256] done synthesizing module 'mux4_4bus' (2#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/mux4_4bus.v:21]
+INFO: [Synth 8-638] synthesizing module 'segClkDevider' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/segClkDevider.v:21]
+	Parameter constantNumber bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'segClkDevider' (3#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/segClkDevider.v:21]
+INFO: [Synth 8-638] synthesizing module 'counter3bit' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/counter3bit.v:1]
+INFO: [Synth 8-256] done synthesizing module 'counter3bit' (4#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/counter3bit.v:1]
+INFO: [Synth 8-638] synthesizing module 'decoder_3_8' [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/decoder3_8.v:21]
+INFO: [Synth 8-256] done synthesizing module 'decoder_3_8' (5#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/decoder3_8.v:21]
+INFO: [Synth 8-256] done synthesizing module 'DigitToSeg' (6#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/DigitToSeg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'XADCdemo' (7#1) [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 291.074 ; gain = 69.660
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin XLXI_47:rst to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/DigitToSeg.v:67]
+WARNING: [Synth 8-3295] tying undriven pin XLXI_49:rst to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/DigitToSeg.v:72]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in5[3] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in5[2] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in5[1] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in5[0] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in6[3] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in6[2] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in6[1] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in6[0] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in7[3] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in7[2] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in7[1] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in7[0] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in8[3] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in8[2] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in8[1] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+WARNING: [Synth 8-3295] tying undriven pin segment1:in8[0] to constant 0 [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/hdl/XADCdemo.v:176]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 291.074 ; gain = 69.660
+---------------------------------------------------------------------------------
+Loading clock regions from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from E:/vivado2014.4/Vivado/2014.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from E:/vivado2014.4/Vivado/2014.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from E:/vivado2014.4/Vivado/2014.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/src/constraints/Basys3_Master.xdc]
+Parsing XDC File [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 521.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for XLXI_7. (constraint file  E:/Basys3-master/Basys3-master/Projects/XADC_Demo/proj/XADC_Demo.runs/synth_1/dont_touch.xdc, line 7).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(18) 
+ROM "clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(18) 
+ROM "dig3" won't be mapped to RAM because address size (33) is larger than maximum supported(18) 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module XADCdemo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sevensegdecoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+Module mux4_4bus 
+Detailed RTL Component Info : 
+Module segClkDevider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter3bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module decoder_3_8 
+Detailed RTL Component Info : 
+Module DigitToSeg 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+ROM "XLXI_47/count" won't be mapped to RAM because address size (32) is larger than maximum supported(18) 
+ROM "XLXI_47/clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(18) 
+ROM "dig3" won't be mapped to RAM because address size (33) is larger than maximum supported(18) 
+DSP Report: Generating DSP dig35, operation Mode is: (A:0x3d090)*B.
+DSP Report: operator dig35 is absorbed into DSP dig35.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 521.574 ; gain = 300.160
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+ Sort Area is null dig35_0 : 0 0 : 693 693 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|XADCdemo    | (A:0x3d090)*B | No           | 18     | 12     | 48     | 25     | 30     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++------------+---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows DSPs generated at current stage. Some DSP generation could be reversed due to later optimizations. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Address_in_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Address_in_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Address_in_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\LED_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (\LED_reg[0] ) is unused and will be removed from module XADCdemo.
+WARNING: [Synth 8-3332] Sequential element (\Address_in_reg[4] ) is unused and will be removed from module XADCdemo.
+WARNING: [Synth 8-3332] Sequential element (\Address_in_reg[2] ) is unused and will be removed from module XADCdemo.
+WARNING: [Synth 8-3332] Sequential element (\Address_in_reg[1] ) is unused and will be removed from module XADCdemo.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dig6_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dig6_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dig6_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (\dig6_reg[3] ) is unused and will be removed from module XADCdemo.
+WARNING: [Synth 8-3332] Sequential element (\dig6_reg[2] ) is unused and will be removed from module XADCdemo.
+WARNING: [Synth 8-3332] Sequential element (\dig6_reg[1] ) is unused and will be removed from module XADCdemo.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 521.574 ; gain = 300.160
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:07 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin di_in[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin dwe_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin vp_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module XLXI_7 has unconnected pin vn_in
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |xadc_wiz_0_bbox |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |    16|
+|4     |DSP48E1         |     1|
+|5     |LUT1            |    58|
+|6     |LUT2            |    41|
+|7     |LUT3            |    36|
+|8     |LUT4            |    20|
+|9     |LUT5            |    51|
+|10    |LUT6            |   111|
+|11    |FDRE            |    98|
+|12    |FDSE            |     1|
+|13    |IBUF            |    11|
+|14    |OBUF            |    28|
++------+----------------+------+
+
+Report Instance Areas: 
++------+------------+--------------+------+
+|      |Instance    |Module        |Cells |
++------+------------+--------------+------+
+|1     |top         |              |   499|
+|2     |  segment1  |DigitToSeg    |   136|
+|3     |    XLXI_47 |segClkDevider |   112|
+|4     |    XLXI_49 |counter3bit   |    24|
++------+------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 521.574 ; gain = 300.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 19 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 521.574 ; gain = 22.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 521.574 ; gain = 300.160
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 27 Warnings, 19 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:09 . Memory (MB): peak = 521.574 ; gain = 276.547
+# write_checkpoint -noxdef XADCdemo.dcp
+# catch { report_utilization -file XADCdemo_utilization_synth.rpt -pb XADCdemo_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.608 . Memory (MB): peak = 521.574 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 07 19:15:12 2016...
