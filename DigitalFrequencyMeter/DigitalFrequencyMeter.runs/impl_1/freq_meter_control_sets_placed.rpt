@@ -1,0 +1,65 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
+| Date         : Thu Apr 14 22:13:02 2016
+| Host         : DESKTOP-69K2SQ7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file freq_meter_control_sets_placed.rpt
+| Design       : freq_meter
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    12 |
+| Minimum Number of register sites lost to control set restrictions |    25 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | Yes                    |              16 |            4 |
+| No           | Yes                   | No                     |              57 |           15 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              16 |            3 |
+| Yes          | Yes                   | No                     |              37 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------+---------------------------------+---------------------------------+------------------+----------------+
+|     Clock Signal     |          Enable Signal          |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------------+---------------------------------+---------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG |                                 |                                 |                1 |              1 |
+|  clk_1               |                                 |                                 |                1 |              1 |
+|  sys_clk0_BUFG       | bin2bcd_ins/n_0_counter[4]_i_1  | rst_IBUF                        |                2 |              5 |
+|  clk_BUFG            |                                 |                                 |                3 |              7 |
+|  clk_BUFG            |                                 | n_0_cnt_out[7]_i_1              |                2 |              8 |
+|  sys_clk0_BUFG       | bin2bcd_ins/n_0_BCD_out[14]_i_2 | bin2bcd_ins/n_0_BCD_out[14]_i_1 |                1 |              8 |
+|  sys_clk0_BUFG       | bin2bcd_ins/n_0_BCD_out[15]_i_1 | rst_IBUF                        |                2 |              8 |
+|  clk_BUFG            |                                 | n_0_cnt_1[0]_i_1                |                4 |             16 |
+|  signal_f_BUFG       |                                 | rst_IBUF                        |                4 |             16 |
+|  signal_f_BUFG       | gate                            | rst_IBUF                        |                3 |             16 |
+|  sys_clk0_BUFG       | bin2bcd_ins/n_0_digit0[3]_i_2   | bin2bcd_ins/n_0_digit0[3]_i_1   |                4 |             16 |
+|  CLK100MHZ_IBUF_BUFG |                                 | n_0_cnt[0]_i_1                  |                9 |             33 |
++----------------------+---------------------------------+---------------------------------+------------------+----------------+
+
+

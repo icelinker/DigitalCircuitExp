@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1460643128">
+  <File Type="PWROPT-DCP" Name="freq_meter_pwropt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PLACE-DCP" Name="freq_meter_placed.dcp"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DRC" Name="freq_meter_drc_pwropted.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="freq_meter_timing_summary_routed.rpt"/>
+  <File Type="PA-TCL" Name="freq_meter.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DCP" Name="freq_meter_opt.dcp"/>
+  <File Type="OPT-DRC" Name="freq_meter_drc_opted.rpt"/>
+  <File Type="PLACE-IO" Name="freq_meter_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="freq_meter_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="freq_meter_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="freq_meter_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="freq_meter_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="freq_meter_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="freq_meter_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="freq_meter_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="freq_meter_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="freq_meter_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="freq_meter_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="freq_meter_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="freq_meter_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="freq_meter_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="freq_meter_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="freq_meter_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="freq_meter_route_status.pb"/>
+  <File Type="ROUTE-TIMING-PB" Name="freq_meter_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="freq_meter_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="freq_meter_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="freq_meter_postroute_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="freq_meter.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="freq_meter_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="freq_meter_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="freq_meter_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="freq_meter.bit"/>
+  <File Type="BG-BIN" Name="freq_meter.bin"/>
+  <File Type="BITSTR-MSK" Name="freq_meter.msk"/>
+  <File Type="BITSTR-RBT" Name="freq_meter.rbt"/>
+  <File Type="BITSTR-NKY" Name="freq_meter.nky"/>
+  <File Type="BITSTR-BMM" Name="freq_meter_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="freq_meter.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="freq_meter.sysdef"/>
+  <File Type="BG-BGN" Name="freq_meter.bgn"/>
+  <File Type="BG-DRC" Name="freq_meter.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/bin2bcd.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/freq_meter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="freq_meter"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/constraints/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/constraints/Basys3_Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
